@@ -1,5 +1,5 @@
 <template>
-    <section class="location columns hero is-danger is-small">
+    <section class="location columns hero is-mantra is-small">
         <div class="column">
             <br><br><br><br><br><br>
         </div>

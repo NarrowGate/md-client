@@ -1,6 +1,6 @@
 <template>
   <div class="columns">
-    <div id="app" class="column">
+    <div id="app" class="column mantra">
       <div id="nav">
         <ul>
           <router-link tag="li" to="/">My Driving School</router-link>    
@@ -27,7 +27,7 @@ html, body {
 }
 
 body {
-  background: #e2aab6;
+  background: #d0d2d2;
 }
 
 #app {
@@ -35,10 +35,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 #nav {
   padding: 30px;
+  background: #505d75;
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -47,14 +47,26 @@ body {
     display: inline-block;
     cursor: pointer;
     padding: 0 10px;
+    color:#fafafb;
 
     &:hover {
-      color: #209cee;
+      color: #9c9693;
     }
 
     &.router-link-exact-active {
-      color: #209cee;
+      color: #00aced;
     }
+  }
+}
+
+.is-mantra {
+  background:#ffffff;
+  color:#4d5b73;
+}
+
+.mantra {
+  .title {
+    color: #00aced;
   }
 }
 </style>

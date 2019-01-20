@@ -1,6 +1,6 @@
 <template>
 
-    <section class="home hero is-info is-small">
+    <section class="home hero is-mantra is-small">
       <div class="hero-body">
         <div class="container has-text-centered">
           <p class="title">
@@ -28,4 +28,6 @@
 export default {
   name: 'home'
 }
+
+// https://www.behance.net/gallery/70699475/Aunited-United-states-history-Web-site
 </script>

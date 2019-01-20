@@ -1,5 +1,5 @@
 <template>
-    <section class="hero is-warning is-small">
+    <section class="hero is-mantra is-small">
         <br><br>
         <div class="columns">
             <div class="column">1 Hr - 60</div>
