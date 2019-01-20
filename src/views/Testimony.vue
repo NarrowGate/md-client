@@ -1,5 +1,7 @@
 <template>
-    <div class="testimony">
-        <h2>This is the Testimony page</h2>
-    </div>
+    <section class="columns hero is-small is-primary">
+        <div class="column">
+            <br><br><br><br><br><br>
+        </div>
+    </section>
 </template>

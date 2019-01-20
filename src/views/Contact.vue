@@ -1,5 +1,7 @@
 <template>
-    <div class="contact">
-        <h2>This is the Contact page</h2>
-    </div>
+    <section class="hero is-small is-dark">
+        <div class="column">
+            <br><br><br><br><br><br>
+        </div>
+    </section>
 </template>

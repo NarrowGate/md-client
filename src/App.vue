@@ -1,19 +1,33 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">My Driving School</router-link> |
-      <router-link to="/resources">Resourses</router-link>
-      <router-link to="/location">Location</router-link>
-      <router-link to="/testimony">Testimony</router-link>
-      <router-link to="/contact">Contact</router-link>
+  <div class="columns">
+    <div id="app" class="column">
+      <div id="nav">
+        <ul>
+          <router-link tag="li" to="/">My Driving School</router-link>    
+          <router-link tag="li" to="/resources">Resourses</router-link>
+          <router-link tag="li" to="/location">Location</router-link>
+          <router-link tag="li" to="/packages">Packages</router-link>
+          <router-link tag="li" to="/testimony">Testimony</router-link>
+          <router-link tag="li" to="/contact">Contact</router-link>    
+        </ul>
+      </div>
+      <router-view/>
+
+      <footer>
+        <p>Footer Text</p>
+      </footer>
     </div>
-    <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+
+html, body {
+  height: 100%;
+}
+
 body {
-  background: #161616;
+  background: #e2aab6;
 }
 
 #app {
@@ -28,8 +42,18 @@ body {
   a {
     font-weight: bold;
     color: #2c3e50;
+  }
+  li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 10px;
+
+    &:hover {
+      color: #209cee;
+    }
+
     &.router-link-exact-active {
-      color: #42b983;
+      color: #209cee;
     }
   }
 }
