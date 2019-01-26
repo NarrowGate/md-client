@@ -22,12 +22,9 @@
 
 <style lang="scss">
 
-html, body {
-  height: 100%;
-}
-
 body {
   background: #d0d2d2;
+  height: 100%;
 }
 
 #app {
