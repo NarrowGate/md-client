@@ -1,54 +1,60 @@
 <template>
     <section class="container">
-        <div class="columns">
-            <div class="column is-8">
-                <form action="" class="contactForm">
+        <form action="" class="contactForm">
+            <div class="columns">
+                
+                <div class="column is-4">                    
                     <div class="field">
-                        <label for="" class="label">Name</label>
+                        <label for="" class="label has-text-left">Name</label>
                         <div class="control">
                             <input type="text" class="input">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="" class="label">Email</label>
+                        <label for="" class="label has-text-left">Email</label>
                         <div class="control">
                             <input type="email" class="input">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="" class="label">Phone</label>
+                        <label for="" class="label has-text-left">Phone</label>
                         <div class="control">
                             <input type="number" class="input">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="" class="label">Suburb</label>
+                        <label for="" class="label has-text-left">Suburb</label>
                         <div class="control">
                             <input type="text" class="input">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="" class="label">Subject</label>
+                        <label for="" class="label has-text-left">Subject</label>
                         <div class="control">
-                            <div class="select">
+                            <div class="select" style="width: 100%">
                                 <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                    <option value="">General Enquiry</option>
+                                    <option value="">Driving Lessons</option>
+                                    <option value="">Lesson and Test</option>
                                 </select>
-                            </div>
-                            <input type="text" class="input">
+                            </div>                            
                         </div>
                     </div>
                     <div class="field">
-                        <label for="" class="label">Enquiry</label>
+                        <label for="" class="label has-text-left">Enquiry</label>
                         <div class="control">                        
                             <textarea class="textarea" placeholder="10 lines of textarea" rows="10"></textarea>
                         </div>
                     </div>
-                </form>
-
+                    <div class="field">
+                        <div class="control">
+                            <input type="submit"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4"></div>
             </div>
-        </div>
+        </form>
     </section>
 </template>
 
