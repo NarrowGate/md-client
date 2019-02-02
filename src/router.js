@@ -46,6 +46,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Packages.vue')
     },
     {
+      path: '/buyPackage/:id',
+      name: 'buyPackage',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/BuyPackage.vue')
+    },
+    {
       path: '/testimony',
       name: 'testimony',
       // route level code-splitting

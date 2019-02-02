@@ -48,7 +48,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input type="submit"/>
+                            <button class="button is-primary">Submit</button>
                         </div>
                     </div>
                 </div>

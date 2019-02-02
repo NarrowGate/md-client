@@ -1,6 +1,5 @@
 <template>
     <section class="container has-text-left">
-        <br><br>
         <div class="columns packages">
             <div class="column">
                 <div class="card">
@@ -12,8 +11,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                         <router-link tag="a" to="buyPackage/a">Buy</router-link>  
                     </div>
                 </div>
             </div>
@@ -27,8 +26,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/b">Buy</router-link>  
                     </div>
                 </div>
             </div>
@@ -42,8 +41,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer has-text-center">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/c">Buy</router-link>  
                     </div>
                 </div>
             </div>
@@ -60,8 +59,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/d">Buy</router-link>  
                     </div>
                 </div>
             </div>
@@ -75,8 +74,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/e">Buy</router-link>  
                     </div>
                 </div>
             </div>
@@ -90,14 +89,14 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/f">Buy</router-link>  
                     </div>
                 </div>
             </div>
         </div>
         <br><br>
-        <h2 class="title is-2">Test</h2>
+        <h2 class="title is-2">Test Packages</h2>
         <div class="columns packages">            
             <div class="column">
                 <div class="card">
@@ -109,8 +108,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/g">Buy</router-link>  
                     </div>
                 </div>
             </div>
@@ -124,8 +123,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/h">Buy</router-link>  
                     </div>
                 </div>            
             </div>
@@ -142,8 +141,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/i">Buy</router-link>
                     </div>
                 </div>  
             </div>
@@ -157,8 +156,8 @@
                     <div class="card-body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="">Buy</a>
+                    <div class="card-footer buy">
+                        <router-link tag="a" to="buyPackage/j">Buy</router-link>
                     </div>
                 </div>  
             </div>
@@ -167,18 +166,31 @@
     </section>
 </template>
 
+<script>
+export default {
+    data () {
+        return {
+
+        }
+    }
+}
+</script>
+
+
 <style>
 .packages .column {
     flex-basis: 200px;
-    background: white;
 }
 
-.packages {
-    min-height: 30vh;
-}
-
-.packages p {
+.packages .buy {
+    display: flex;
+    justify-content: center;
     padding: 1rem;
+}
+
+.buy a {
+    font-size: 2rem;
+    color:#00aced;
 }
 </style>
 

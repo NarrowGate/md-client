@@ -11,8 +11,7 @@
           <router-link tag="li" to="/contact">Contact</router-link>    
         </ul>
       </div>
-      <router-view/>
-
+      <router-view/>   
       <footer>
         <p>Footer Text</p>
       </footer>
@@ -64,6 +63,23 @@ body {
 .mantra {
   .title {
     color: #00aced;
+  }
+  .container {
+    background: #fff;
+    padding: 1rem;
+    min-height: 30vh;
+
+  }
+  p {
+    padding: 1rem;
+  }
+  input, textarea {
+    border-radius: 0;
+    border-color: #7bccec;
+  }
+
+  .title {
+    font-weight: normal;
   }
 }
 </style>
