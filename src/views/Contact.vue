@@ -3,24 +3,39 @@
         <form v-on:submit.prevent class="contactForm">
             <div class="columns">
                 
-                <div class="column is-4">                    
-                    <div class="field">
+                <div class="column is-4">    
+
+
+  <!-- <div class="form-group" :class="{ 'form-group--error': $v.name.$error }">
+    <label class="form__label">Name</label>
+    <input class="form__input" v-model.trim="$v.name.$model"/>
+  </div>
+  <div class="error" v-if="!$v.name.required">Field is required</div>
+  <div class="error" v-if="!$v.name.minLength">Name must have at least {{$v.name.$params.minLength.min}} letters.</div> -->
+
+
+                    <div class="field" :class="{ 'inputError' : $v.name.$error }">
                         <label for="" class="label has-text-left">Name</label>
                         <div class="control">
-                            <input type="text" v-model='name' class="input">
+                            <input type="text" v-model ='$v.name.$model' @blur="$v.name.$touch()" class="input">
                         </div>
+                        <div class="error" v-if="!$v.name.required">Your name is required!</div>
                     </div>
-                    <div class="field">
+                    <div class="field" :class="{ 'inputError' : $v.email.$error }">
                         <label for="" class="label has-text-left">Email</label>
                         <div class="control">
-                            <input type="email" v-model='email' class="input">
+                            <input type="email" v-model='$v.email.$model' @blur="$v.email.$touch()" class="input">
                         </div>
+                        <div class="error" v-if="!$v.email.required">Your email is required!</div>
+                        <div class="error" v-if="!$v.email.email">Please enter a valid email</div>
                     </div>
-                    <div class="field">
+                    <div class="field" :class="{ 'inputError' : $v.phone.$error }">
                         <label for="" class="label has-text-left">Phone</label>
                         <div class="control">
-                            <input type="number"  v-model='phone' class="input">
+                            <input type="number"  v-model='phone' @blur="$v.phone.$touch()" class="input">
                         </div>
+                        <div class="error" v-if="!$v.phone.required">Please provide your phone number!</div>
+                        <div class="error" v-if="!$v.phone.numeric">Please enter a valid phone!</div>
                     </div>
                     <div class="field">
                         <label for="" class="label has-text-left">Suburb</label>
@@ -60,6 +75,8 @@
 </template>
 <script>
 import axios from 'axios'
+import { required, email, numeric } from 'vuelidate/lib/validators'
+
 export default {
 
     data () {
@@ -70,6 +87,20 @@ export default {
             suburb: '',
             subject: '',
             enquiry: ''
+        }
+    },
+
+    validations : {
+        name: {
+            required :required
+        },
+        email: {
+            required: required,
+            email: email
+        },
+        phone: {
+            required: required,
+            phone: numeric
         }
     },
 
@@ -84,7 +115,18 @@ export default {
                 subject : this.subject,
                 enquiry : this.enquiry
             }
+            // this.$v.name.$touch();
+            // this.$v.email.$touch();
 
+            if(this.$v.$invalid) {
+                console.log('form is invalid');
+                return;
+            }
+
+            console.log('form is valid')
+            console.log(contactData);
+
+return;
             // console.log(contactData)
 
             axios.post('/process-contact', contactData)
@@ -102,5 +144,15 @@ export default {
 .contactForm {
     background: white;
     padding: 1rem;
+}
+.inputError input {
+    border: red 1px solid;
+}
+
+.error {
+    display: none;
+}
+.inputError .error {
+    display: block;
 }
 </style>
