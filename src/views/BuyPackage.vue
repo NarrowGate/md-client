@@ -7,7 +7,7 @@
         </div>
         <div class="columns">
             <div class="column is-8">
-                <form action="">
+                <form>
                     <div class="columns">
                         <div class="column is-6">                        
                             <div class="field">
@@ -100,7 +100,7 @@
                     <div class="columns">
                         <div class="column">
                             <div class="control">
-                                <button class="button is-primary">Pay with Paypal</button>
+                                <button class="button is-primary" @click.prevent = "payWithPaypal">Pay with Paypal</button>
                             </div>                      
                         </div>
                     </div>                                 
@@ -119,10 +119,33 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     data () {
         return {
             package: this.$route.params.id
+        }
+    },
+    methods: {
+        payWithPaypal : () => {
+
+        const transactionDetails = {
+                'product' :'product1'
+            }
+            console.log('hit paypal button');
+
+
+            axios.post('/buywithpaypal',transactionDetails)
+            .then((dfs)=> {
+                console.log('axios post sent')
+                console.log(dfs.data);
+
+                window.location = dfs.data
+            })
+            .catch((err) => {
+                console.log(err)
+            })
         }
     }
 }
