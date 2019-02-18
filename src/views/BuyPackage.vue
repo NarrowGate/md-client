@@ -100,10 +100,15 @@
                     <div class="columns">
                         <div class="column">
                             <div class="control">
-                                <button class="button is-primary" @click.prevent = "payWithPaypal">Pay with Paypal</button>
+                                <paypal
+                                    amount="10.00"
+                                    currency="USD"
+                                    :client="credentials">
+                                </paypal>
+                                <!-- <button class="button is-primary" @click.prevent = "payWithPaypal">Pay with Paypal</button> -->
                             </div>                      
                         </div>
-                    </div>                                 
+                    </div>                                                     
                 </form>
             </div>
 
@@ -121,11 +126,20 @@
 <script>
 import axios from 'axios';
 
+import paypal from 'vue-paypal-checkout'
+
 export default {
     data () {
         return {
-            package: this.$route.params.id
+            package: this.$route.params.id,
+            credentials: {
+                sandbox:'',
+                production:''
+            }
         }
+    },
+    components: {
+        paypal
     },
     methods: {
         payWithPaypal : () => {
