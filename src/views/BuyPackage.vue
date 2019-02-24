@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="columns">
-            <div class="column is-8">
+            <div class="column is-8 mantraForm">
                 <form>
                     <div class="columns">
                         <div class="column is-6">                        
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="columns">
-                        <div class="column">
+                        <div class="column is-6">
                             <div class="field">
                                 <label for="" class="label has-text-left">Transmission</label>
                                 <div class="control">
@@ -112,8 +112,8 @@
                 </form>
             </div>
 
-            <div class="column is-4" style="background: #e9efef;">
-                Sidebar
+            <div class="column is-4 sidebar">
+                <h2>FAQ</h2>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>

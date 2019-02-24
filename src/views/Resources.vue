@@ -1,6 +1,6 @@
 <template>
     <section class="container has-text-left">
-        <div class="columns">
+        <div class="columns packages">
             <div class="column">
                 <div class="card">
                     <div class="card-header">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-                <div class="columns">
+                <div class="columns packages">
             <div class="column">
                 <div class="card">
                     <div class="card-header">
