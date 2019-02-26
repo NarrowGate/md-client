@@ -133,8 +133,8 @@ export default {
         return {
             package: this.$route.params.id,
             credentials: {
-                sandbox:'',
-                production:''
+                sandbox:'AQjF9Nvyc-W5MNcGIuXDkXAYBu_-2Rxyhxxx-jreQlFaVHwLgDbQxz8wgFnUhcgtdYTnhEOlYE9a6xfa',
+                production:'Aadxfwml9vmGU8QXOQERb_mkuQ8OnYNKaPG9O30Px8VuSIyOTUEHQqDV1nqshCaI879I84coOlIGGee7'
             }
         }
     },

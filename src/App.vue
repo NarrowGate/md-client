@@ -198,7 +198,7 @@ footer {
     font-weight: normal;
 }
 
-.mantraForm input, .mantraForm select {
+.mantraForm input, .mantraForm .select select, .mantraForm .textarea {
     border: 1px solid #e75500;
     background-color: transparent;
     color:#d2c6b4;
@@ -209,10 +209,11 @@ footer {
     width: 100%
 }
 
-.paypal-button {
+.paypal-button, .mantraForm button {
     width:100%;
     height: 50px;
-    background: #e75500;
+    background: #e75500 !important;
+    border-radius: 0;
 }
 
 // =======================
