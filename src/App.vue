@@ -25,6 +25,20 @@
 
 <style lang="scss">
 
+$primaryColor: #e75500;
+$primaryColorHvr: #e85400;
+
+$primaryTypeColor: #d2c6b4;
+
+
+$secondaryColor: #4b4a48;
+$secondaryTypeColor: white;
+$formErrorRed: #e49191;
+
+
+$tertiaryColor: #d3c6b5;
+$tertiaryTypeColor: #5d2814;
+
 html {
   height: auto;
   min-height:100vh;
@@ -54,15 +68,15 @@ body {
     display: inline-block;
     cursor: pointer;
     padding: 0 10px;
-    color:#d2c6b4;
+    color:$primaryTypeColor;
 
     &:hover {
       color: #9c9693;
     }
 
     &.router-link-exact-active {
-      color: white;
-      background: #e75500;
+      color: $secondaryTypeColor;
+      background: $primaryColor;
       padding: 5px 10px;
     }
   }
@@ -72,7 +86,7 @@ body {
 
 .mantra {
   .title {
-    color: white;
+    color: $secondaryTypeColor;
     font-size:150px;
     margin-bottom:0 !important;
     padding-bottom:0;
@@ -86,7 +100,7 @@ body {
   }
   p {
     padding: 1rem;
-    color: white;
+    color: $secondaryTypeColor;
     font-size: 18px;
   }
   input, textarea {
@@ -100,19 +114,19 @@ body {
 }
 
 .bgC_1 {
-  background:#e75500;
+  background:$primaryColor;
 }
 
 .bgC_2 {
-  background:#4b4a48;
+  background:$secondaryColor;
 }
 
 .bgC_3 {
-  background:#d3c6b5;
+  background:$tertiaryColor;
 }
 
 footer {
-  color: #d2c6b4;
+  color: $primaryTypeColor;
   height: 100px;;
   line-height: 100px;
 }
@@ -124,13 +138,13 @@ footer {
 }
 
 .is-mantra h2 {
-  color: white;
+  color: $secondaryTypeColor;
   padding: 1rem;
   font-size: 36px;
 }
 
 .is-mantra .bgC_3 h2, .is-mantra .bgC_3 p  {
-  color:#5d2814 !important;
+  color:$tertiaryTypeColor !important;
 }
 
 // =======================
@@ -151,8 +165,8 @@ footer {
 }
 
 .packages .card-header-title {
-    color:#5d2814;
-    background: #d3c6b5;
+    color:$tertiaryTypeColor;
+    background: $tertiaryColor;
     flex-grow:0;
     font-size:20px;
     font-weight:normal;
@@ -165,7 +179,7 @@ footer {
 
 .buy a {
     font-size: 2rem;
-    color:#e85400;
+    color:$primaryColorHvr;
     display: block;
     width: 100%;
     text-align:center;
@@ -173,35 +187,35 @@ footer {
 }
 
 .buy a:hover {
-    background: #e85400;
-    color: white;
+    background: $primaryColorHvr;
+    color: $secondaryTypeColor;
 }
 
 // =======================
 // Buy Packages
 
 .sidebar {
-    background: #4b4a48;
+    background: $secondaryColor;
 }
 
 .sidebar h2 {
     font-size: 25px;
-    color: #d2c6b4;
+    color: $primaryTypeColor;
 }
 .mantraForm {
     background: rgba(75, 74, 72, 0.5);
-    color:#d2c6b4;
+    color:$primaryTypeColor;
 }
 
 .mantraForm .label {
-    color: white;
+    color: $secondaryTypeColor;
     font-weight: normal;
 }
 
 .mantraForm input, .mantraForm .select select, .mantraForm .textarea {
-    border: 1px solid #e75500;
+    border: 1px solid $primaryColor;
     background-color: transparent;
-    color:#d2c6b4;
+    color:$primaryTypeColor;
     border-radius: 0;
 }
 
@@ -212,7 +226,7 @@ footer {
 .paypal-button, .mantraForm button {
     width:100%;
     height: 50px;
-    background: #e75500 !important;
+    background: $primaryColor !important;
     border-radius: 0;
 }
 
@@ -223,7 +237,7 @@ footer {
 // Contact Form
 
 .inputError input {
-    border: red 1px solid;
+    border: $formErrorRed 1px solid;
 }
 
 .error {
@@ -231,6 +245,32 @@ footer {
 }
 .inputError .error {
     display: block;
+}
+
+.control {
+  display: flex;
+
+  .input {
+    width: 50%;
+  }
+  .error {
+    width: 47%;
+    padding-left: 25px;
+    line-height: 34px;
+    color: $formErrorRed;
+  }
+}
+
+.twoCol {
+  .control {
+    .input {
+      width: 100%;
+    }
+  }
+}
+
+.button[disabled] {
+  opacity: .2;
 }
 
 </style>

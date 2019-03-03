@@ -125,8 +125,8 @@
 
 <script>
 import axios from 'axios';
-
-import paypal from 'vue-paypal-checkout'
+import paypal from 'vue-paypal-checkout';
+import { required, email, numeric } from 'vuelidate/lib/validators';
 
 export default {
     data () {
@@ -135,7 +135,14 @@ export default {
             credentials: {
                 sandbox:'AQjF9Nvyc-W5MNcGIuXDkXAYBu_-2Rxyhxxx-jreQlFaVHwLgDbQxz8wgFnUhcgtdYTnhEOlYE9a6xfa',
                 production:'Aadxfwml9vmGU8QXOQERb_mkuQ8OnYNKaPG9O30Px8VuSIyOTUEHQqDV1nqshCaI879I84coOlIGGee7'
-            }
+            },
+            firstName:'',
+            lastName:'',
+            contactNumber:'',
+            email:'',
+            pickupAddress:'',
+            transmission:'',
+            package:''
         }
     },
     components: {
