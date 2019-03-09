@@ -1,5 +1,7 @@
 <template>
     <section class="container has-text-left">
+        <h2 class="title is-2">Drving Lessons Packages</h2>
+        <br>
         <div class="columns packages">
             <div class="column">
                 <div class="card">
@@ -97,6 +99,7 @@
         </div>
         <br><br>
         <h2 class="title is-2">Test Packages</h2>
+        <br>
         <div class="columns packages">            
             <div class="column">
                 <div class="card">
@@ -175,22 +178,3 @@ export default {
     }
 }
 </script>
-
-
-<style>
-.packages .column {
-    flex-basis: 200px;
-}
-
-.packages .buy {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.buy a {
-    font-size: 2rem;
-    color:#00aced;
-}
-</style>
-
